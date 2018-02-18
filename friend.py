@@ -16,4 +16,4 @@ result = unio.filter(lambda u:u[1][2] >= 0).groupByKey().map(lambda v: sorted(v[
 result.saveAsTextFile(sys.argv[2])
 sc.stop()
 
-~/opt/spark/bin/spark-submit friend.py soc-data.txt ~/spark_code/result/
+#~/opt/spark/bin/spark-submit friend.py soc-data.txt ~/spark_code/result/
