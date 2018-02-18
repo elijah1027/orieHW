@@ -7,6 +7,10 @@ import operator
 
 class MRWordCounter(MRJob):
     def mapper(self, key, line):
+        #Reference:
+        #https://docs.python.org/2/library/re.html(Link:findall)
+        #https://stackoverflow.com/questions/16312955/what-is-the-regular-expression-in-python-that-match-alphabet-only(Link: find alphabet)
+        #Note: Code from the lecture does not work. It introduced non-alphabet chars. 
         line_split = re.findall(r"[a-zA-Z]+",line)
         for word in line_split:
             yield word[0].upper(),1            
