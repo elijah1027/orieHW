@@ -5,7 +5,7 @@ conf = SparkConf()
 sc = SparkContext(conf=conf)
 lines = sc.textFile(sys.argv[1])
 user_friend = lines.map(lambda l:tuple(l.split('\t')))
-user_ratingprod = user_friend.flatMap(lambda x:[((x[0],i),0) for i in x[1].split(',')])
+user_ratingprod = user_friend.flatMap(lambda x:[((x[0],i),-1000) for i in x[1].split(',')])
 u_friend = user_friend.map(lambda x:(x[1].split(',')))
 #print('step1')
 #Reference:
