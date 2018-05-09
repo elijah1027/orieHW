@@ -1,4 +1,4 @@
-- Factor model combined with portfolio optimization
+# Factor model combined with portfolio optimization
 - Two factors are chosen: momentum and size
 - Three portfolio optimization models: Markowitz mean variance portfolio, inverse variance portfolio and hierarchy risk parity portfolio
 - Two back test cases are considers: W/O transaction cost and with transaction cost
